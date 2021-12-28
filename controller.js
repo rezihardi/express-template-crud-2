@@ -89,6 +89,7 @@ exports.deleteProd = function(req, res) {
         if(error){
             console.log(error)
         } else{
+            //ide sendiri
             let data = {
                 'status': "ok",
                 'message': "berhasil menghapus id dengan product_id:  " + productId
