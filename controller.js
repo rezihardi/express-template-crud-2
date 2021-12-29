@@ -1,7 +1,7 @@
 'use strict';
 
-let response200 = require('./res200');
-let response201 = require('./resp-null');
+let response200 = require('./res/res200');
+let response201 = require('./res/resp-null');
 let connection = require('./conn');
 
 exports.product = function(req, res) {
