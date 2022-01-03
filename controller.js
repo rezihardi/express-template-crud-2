@@ -16,7 +16,6 @@ exports.product = function(req, res) {
 
 exports.findProduct = function(req, res) {
     let productId = req.params.productId;
-
     connection.query('SELECT * FROM product where product_id = ?',
     [ productId ], 
     function (error, rows, fields){
