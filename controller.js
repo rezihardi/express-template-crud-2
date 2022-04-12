@@ -4,7 +4,7 @@ const response200 = require('./res/res200');
 const response201 = require('./res/resp-null');
 const connection = require('./config/conn');
 
-exports.product = function(req, res) {
+exports.product =async function(req, res) {
     connection.query('SELECT * FROM product', function (error, rows, fields){
         if(error){
             console.log(error)
@@ -29,7 +29,7 @@ exports.findProduct = function(req, res) {
 
 
 
-exports.createProd = function(req, res) {
+exports.createProd =async function(req, res) {
     let product_id = req.body.product_id;
     let product_name = req.body.product_name;
     let product_price = req.body.product_price;
@@ -63,7 +63,7 @@ exports.createProd = function(req, res) {
     });
 };
 
-exports.updateProd = function(req, res) {
+exports.updateProd = async function(req, res) {
     
     let product_id = req.body.product_id;
     let product_name = req.body.product_name;
@@ -79,7 +79,7 @@ exports.updateProd = function(req, res) {
     });
 };
 
-exports.deleteProd = function(req, res) {
+exports.deleteProd = async function(req, res) {
     let productId = req.params.productId;
 
     connection.query('delete from product WHERE product_id = ?',

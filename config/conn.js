@@ -1,11 +1,13 @@
 let mysql = require('mysql');
 
-let con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "pos_db"
-});
+
+// mysql
+// let con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database: "pos_db"
+// });
 
 con.connect(function (err){
     if(err) throw err;
