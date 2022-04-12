@@ -1,8 +1,8 @@
 'use strict';
 
-let response200 = require('./res/res200');
-let response201 = require('./res/resp-null');
-let connection = require('./config/conn');
+const response200 = require('./res/res200');
+const response201 = require('./res/resp-null');
+const connection = require('./config/conn');
 
 exports.product = function(req, res) {
     connection.query('SELECT * FROM product', function (error, rows, fields){
